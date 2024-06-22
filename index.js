@@ -8,7 +8,7 @@ do {
             type: "input",
             message: "Enter your Sentence to count the words",
         }]);
-    const word = answers.Sentence.trim().split(" ");
+    const word = answers.Sentence.trim().split(" ").filter(Boolean);
     console.log(chalk.cyanBright.bold(`${word}`));
     console.log(chalk.grey.bold(`Your sentence word count is ${chalk.yellowBright.bold(word.length)}`));
 } while (true);
